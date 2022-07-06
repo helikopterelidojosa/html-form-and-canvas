@@ -1,6 +1,17 @@
 form{
+
+    /* we put some styling for the, html form element */
     background-color: #d7d7d7;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
+canvas{
+
+    /* it is important to the visitor of the webpage
+    to see the canvas from the start
+    so  we set the red border in the first place
+    and short descriptions to the user in visible html Form */
+     border: solid 3px #f00;
+}
