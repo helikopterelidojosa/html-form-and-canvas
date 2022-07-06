@@ -1,13 +1,136 @@
+<!-- this is learning how html form data, may be stored as, js variable -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>forms for drawing</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+<!-- 
+    next 3 lines  of code, after comment, are funny,
+    just type ! and  press Enter, after couple of years codding,
+    dont know how to write them actually... -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html form js var</title>
+
+
+<!-- next line is adding the css formatting,
+ the design for our webpage -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <!-- what goes in body is all the visible things in our webpage -->
+  <body>
+    <!-- setting up form -->
+
+    
+    <form id="myForm">
+        <p>canvas is the red square below, you can adjust its size</p>
+      <label for="">canvas width:</label>
+
+      <!-- next 2 inputs controls the size of the canvas -->
+      <input
+        type="number"
+        name="input-width"
+        value="50"
+        min="50"
+        max="300"
+        title="canvas width 50-300"
+      />
+
+      
+
+      <label for="">canvas height:</label>
+      <input type="number" name="input-height" value="50" min="50" max="300" />
+
+      <br />
+
+      <!-- next goes all about the circle in the canvas -->
+      <!-- circle circle circle circle circle -->
+
+
+
+      <!-- next line determines if the circle will be drawn by checking the checkbox -->
+      <p>make the circle is visible, by check-box, then choose the other parametres: color, position x and y, and size (radius)</p>
+      
+      <h4>circle:<input id="setCircle" type="checkbox" /></h4>
+
+
+      <!-- what goes next is for color of circle -->
+      <!-- we can type the color in any color format
+       or choose the color from datalist -->
+      <label for="">color:</label>
+
+      <input
+        type="text"
+        name="input-circle-color"
+        list="list-of-colors"
+        id="colorPicker"
+      />
+
+      <datalist id="list-of-colors">
+        <option value="red"></option>
+        <option value="green"></option>
+        <option value="blue"></option>
+        <option value="cyan"></option>
+        <option value="brown"></option>
+        <option value="orange"></option>
+        <option value="yellow"></option>
+        <option value="blue"></option>
+      </datalist>
+
+      
+
+      <!-- next goes horizontal position of the circle -->
+      <label for="">circle x:</label>
+      <input
+        type="number"
+        name="input-circle-x"
+        value="20"
+        min="0"
+        max="300"
+        title="horizontal position 0-300"
+      />
+
    
-</body>
+
+      <!-- next goes vertical position of the  circle
+      if the value is smaller the circe will be more up
+      if the value is bigger the circle goes down -->
+      <label for="">circle y:</label>
+      <input
+        type="number"
+        name="input-circle-y"
+        value="20"
+        min="0"
+        max="300"
+        title="vertical position 0-300"
+      />
+
+
+      <!-- this is how big the circle is
+       by setting its radius value -->
+      <label for="">circle radius</label>
+      <input
+        type="number"
+        name="input-circle-radius"
+        value="20"
+        min="0"
+        max="200"
+        title="radius 0-200"
+      />
+      <!-- here is the end of the form -->
+    </form>
+
+
+ <!-- next is canvas element that goes below the form -->
+
+
+    <canvas id="mC"></canvas>
+
+
+  </body>
+
+  <!-- what goes next is adding the javascript file
+   for making the respective drawing on canvas -->
+  <script src="./app.js"></script>
 </html>
